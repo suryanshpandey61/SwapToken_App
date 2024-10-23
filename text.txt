@@ -1,0 +1,80 @@
+const TOKEN_A_ADDRESS = "0x6fccD170e12f9006bF59492ab99c9595436e8A9C";
+const TOKEN_B_ADDRESS = "0x7629D9Aa9839687C3c0Ef7f4F2AbFcbA39b01cF2";
+const SWAP_CONTRACT_ADDRESS = "0x85Dd45261c8F9195957153Bf75F477A053575D28";
+const SWAP_ABI = [
+  // ABI of the swap function
+  "function swap(uint256 amountA, address tokenB) external"[
+    ({
+      inputs: [
+        {
+          internalType: "address",
+          name: "account",
+          type: "address",
+        },
+      ],
+      name: "balanceOf",
+      outputs: [
+        {
+          internalType: "uint256",
+          name: "",
+          type: "uint256",
+        },
+      ],
+      stateMutability: "view",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "recipient",
+          type: "address",
+        },
+        {
+          internalType: "uint256",
+          name: "amount",
+          type: "uint256",
+        },
+      ],
+      name: "transfer",
+      outputs: [
+        {
+          internalType: "bool",
+          name: "",
+          type: "bool",
+        },
+      ],
+      stateMutability: "nonpayable",
+      type: "function",
+    },
+    {
+      inputs: [
+        {
+          internalType: "address",
+          name: "sender",
+          type: "address",
+        },
+        {
+          internalType: "address",
+          name: "recipient",
+          type: "address",
+        },
+        {
+          internalType: "uint256",
+          name: "amount",
+          type: "uint256",
+        },
+      ],
+      name: "transferFrom",
+      outputs: [
+        {
+          internalType: "bool",
+          name: "",
+          type: "bool",
+        },
+      ],
+      stateMutability: "nonpayable",
+      type: "function",
+    })
+  ],
+];
